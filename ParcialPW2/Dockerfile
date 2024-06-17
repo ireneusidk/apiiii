@@ -6,7 +6,7 @@ FROM node
 
 # Para lanzar nuestro código node, debemos importarlo a nuestra imagen.
 # Utilizamos la palabra clave WORKDIR para crear el directorio "app".
-WORKDIR /app
+WORKDIR /
 
 # Utilizamos la palabra clave 'COPY' para importar el codigo.
 # El primer parámetro '.' indica TODO el contenido de la carpeta donde estamos parados
