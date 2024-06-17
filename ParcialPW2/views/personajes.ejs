@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes</title>
+    <link href="../public/assets/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <button class="return">
+    <a href="../public/index.html">
+    <img src="../public/img/13964.png" alt="" width="50px">
+  </a>
+  </button>
+    <h1>Lista de personajes creados por el usuario</h1>
+    <form action="/personajes" method="post" class="container">
+        <fieldset>
+          <legend>Agregar personaje:</legend>
+           <p><label for="nombre">Nombre: <input type="text" name="nombre" /></label></p>
+          <p><label for="descripcion">Descripcion: <input type="text" name="descripcion"/></label></p>
+          <p><label>Imagen: <input type="file" name="imagen" accept="image/*"/></label></p>
+          <p><input type="submit" name="submit" value="agregar"/></p> 
+          <!-- <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre">
+          <label for="descripcion">Descripción:</label>
+          <input type="text" id="descripcion" name="descripcion"> -->
+          <!-- <label for="imagen">URL de la Imagen:</label>
+          <input type="text" id="imagen" name="imagen" required> -->
+          <!-- <button type="submit">Agregar Personaje</button> -->
+        </fieldset>
+    </form>
+
+  <div class="container">
+      <fieldset>
+        <legend>Tabla de personajes:</legend>
+      <table>
+        <tr>
+          <th>Nombre</th>
+          <th class="campo1" >Descripcion</th>
+          <th>Imagen</th>
+          <th>Acciones</th>
+          <!-- <th>Acciones</th> -->
+        </tr>
+         <!-- <% for(i = 0; i < personajes.length; i++) { %>
+        <tr>
+          <td><%= personajes[i].nombre %></td>
+          <td><%= personajes[i].descripcion %></td>
+          <td><% if (personajes[i].imagen_url) { %>
+            <img src="<%= personajes[i].imagen_url %>" alt="<%= personajes.nombre %>" width="100"/>
+                <% } else { %>
+                  <p>No hay ninguna imagen disponible</p>
+                <% } %>
+          </td>
+          
+          <td>
+              <button onclick="eliminar('<%= personajes[i].nombre %>')">X</button>
+          </td>
+        </tr>
+        <% } %> -->
+        <!-- <% if (personajes && personajes.length > 0) { %>
+          <% personajes.forEach(personaje => { %>
+              <tr>
+                  <td><%= personaje.nombre %></td>
+                  <td><%= personaje.descripcion %></td>
+                  <td><img src="<%= personaje.imagen %>" alt="<%= personaje.nombre %>" width="100"></td>
+                  <td>
+                    <form action="/personajes/<%= personaje._id %>?_method=DELETE" method="POST">
+                      <button type="submit">Eliminar</button>
+                    </form>
+                </td>
+              </tr>
+          <% }) %>
+      <% } else { %>
+          <tr>
+              <td colspan="3">No hay personajes disponibles.</td>
+          </tr>
+      <% } %> -->
+      <% if (personajes && personajes.length > 0) { %>
+        <% personajes.forEach(personaje => { %>
+            <tr>
+                <td><%= personaje.nombre %></td>
+                <td><%= personaje.descripcion %></td>
+                <td><img src="<%= personaje.imagen %>" alt="<%= personaje.nombre %>" width="100"></td>
+                <td>
+                  <form action="/personajes/<%= personaje._id %>?_method=DELETE" method="POST">
+                    <button type="submit">Eliminar</button>
+                  </form>
+              </td>
+            </tr>
+        <% }) %>
+    <% } else { %>
+        <tr>
+            <td colspan="4">No hay personajes disponibles.</td>
+        </tr>
+    <% } %>
+      </table>
+    </fieldset>
+  </div>
+
+    <!-- <script>
+      function eliminar(nombre) {
+        fetch("http://localhost:3000/personaje", {
+          method: "DELETE",
+          body: nombre
+        });
+          document.location.href = "http://localhost:3000/personajes";
+      }
+    </script> -->
+
+</body>
+</html>

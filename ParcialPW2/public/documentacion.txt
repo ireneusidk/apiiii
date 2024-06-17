@@ -1,0 +1,7 @@
+                             Api de personajes
+En esta api de Creacion de Personajes vamos a haciendo uso de Thunder Client
+En el cual podemos instanciar nombre y descripcion del personaje a crear en formato json.
+Podemos añadir personajes, eliminarlos, editarlos y buscarlos por su id.
+La generacion del id es random. Si el id no coincide con ninguno entonces
+recibiremos una respuesta que dice Personaje no encontrado.
+Hay por defecto tres personajes:"Elara Firebrand", "Thorn Shadowblade", "Lyra Silverwind" que podemos verlos en formato JSON.

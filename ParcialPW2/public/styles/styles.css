@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+   
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    background-image: url(../img/88114251-varios-mano-concepto-de-recaudación-de-niños.png);
+     font-family: 'Oswald', sans-serif; 
+     font-weight: bold;
+}
+.nav-bar{
+    background-color: black;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+ul{
+    list-style: none;
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+ul img{
+    float: left;
+    z-index: 1;
+    width: 70px;
+}
+.container {
+    max-width: 800px;
+    margin: 10% auto;
+    padding: 30px 40px;
+    /* background-color: #bb89e4ec; */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border:2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(20px);
+}
+h1{
+   
+            font-size: 3em;
+            font-weight: 100;
+            color: #333;
+            text-align: center;
+            margin-top: 50px;
+}
+.title {
+    color: #f2ffd3dc;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.personajes-lista {
+    list-style-type: none;
+    padding: 0;
+}
+
+.personajes-lista li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+footer{
+    clear: both;
+    color: white;
+    background-color: black;
+    padding: 2%;
+    text-align: center;
+}
+button{
+   padding: 1rem;
+   background-color: lightblue;
+   /* margin-left: 34%; */
+   display: block;
+   margin: 0 auto;
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+button a{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif  ;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    border: none;
+}
